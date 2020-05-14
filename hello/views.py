@@ -1,7 +1,7 @@
 from django.shortcuts import render
 # from django.http import HttpResponse
 from django.http import JsonResponse
-# from packages.class_kimsohyeon import Cal3 as C3
+from packages.class_kimsohyeon import Cal3 as C3
 
 def home(request):
     value01 = request.GET['value1']
