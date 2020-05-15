@@ -16,8 +16,9 @@ def home(request):
     value02 = request.GET['value2']
     val3 = Cal3(value01,value02)
     pickle.dump(val3, open("./hello/pickle_kimsohyeon.pkl","wb"))
-    with open("./hello/pickle_kimsohyeon.pkl","rb") as pc :
-        val_pkl = pickle.load(pc)
+    val_pkl = pickle.load(open("./hello/pickle_kimsohyeon.pkl","rb"))
+    # with open("./hello/pickle_kimsohyeon.pkl","rb") as pc :
+    #     val_pkl = pickle.load(pc)
     result = val_pkl.getPredict()
     requestDict = {'result_response':result}
     return JsonResponse(requestDict)
