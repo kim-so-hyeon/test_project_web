@@ -15,8 +15,8 @@ def home(request):
     value01 = request.GET['value1']
     value02 = request.GET['value2']
     val3 = Cal3(value01,value02)
-    pickle.dump(val3, open("D:/workspace/test_project_web/hello/pickle_kimsohyeon.pkl","wb"))
-    with open("D:/workspace/test_project_web/hello/pickle_kimsohyeon.pkl","rb") as pc :
+    pickle.dump(val3, open("./hello/pickle_kimsohyeon.pkl","wb"))
+    with open("./hello/pickle_kimsohyeon.pkl","rb") as pc :
         val_pkl = pickle.load(pc)
     result = val_pkl.getPredict()
     requestDict = {'result_response':result}
